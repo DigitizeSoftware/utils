@@ -1,0 +1,19 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "Most popular JS/TS utils you usually tend to \"reinvent\" every time you work on new project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DigitizeSoftware/utils.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DigitizeSoftware/utils/issues"
+  },
+  "homepage": "https://github.com/DigitizeSoftware/utils#readme"
+}
