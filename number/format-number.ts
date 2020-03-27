@@ -2,6 +2,9 @@ import { round } from "./round";
 import { padEnd } from "../string";
 
 export function formatNumber(n: number, fractionalDigits: number = 2): string {
+    if (n == null || isNaN(n)) {
+        return "";
+    }
     if (fractionalDigits) {
         n = round(n, fractionalDigits);
     }
@@ -23,7 +26,7 @@ export function formatNumber(n: number, fractionalDigits: number = 2): string {
     }
     parts[0] = thousands.join(',');
     if (fractionalDigits) {
-        parts[1] = padEnd(parts[1], fractionalDigits, '0');
+        parts[1] = padEnd(parts[1] || "", fractionalDigits, '0');
     }
 
     return parts.join('.');
