@@ -1,7 +1,7 @@
 import { round } from "./round";
 import { padEnd } from "../string";
 
-export function formatNumber(n: number, fractionalDigits: number = 2): string {
+export function formatNumber(n: number, fractionalDigits: number = 2, format: "us" | "eu" = "us"): string {
     if (n == null || isNaN(n)) {
         return "";
     }
@@ -24,10 +24,14 @@ export function formatNumber(n: number, fractionalDigits: number = 2): string {
         thousands.unshift(parts[0].substr(i, l));
         i -= 3;
     }
-    parts[0] = thousands.join(',');
+
+    const comma = format === "us" ? "." : ",";
+    const delimiter = format === "us" ? "," : " ";
+
+    parts[0] = thousands.join(delimiter);
     if (fractionalDigits) {
         parts[1] = padEnd(parts[1] || "", fractionalDigits, '0');
     }
 
-    return parts.join('.');
+    return parts.join(comma);
 }
