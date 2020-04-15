@@ -1,6 +1,6 @@
 {
   "name": "@digitize/utils",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Most popular JS/TS utils you usually tend to \"reinvent\" every time you work on new project",
   "main": "index.js",
   "scripts": {
