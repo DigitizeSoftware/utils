@@ -4,5 +4,5 @@ export interface ValidationResult {
 }
 
 export class Validator {
-    private errors: Array<string> = [];
+    // private errors: Array<string> = [];
 }

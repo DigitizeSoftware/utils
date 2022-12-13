@@ -14,14 +14,14 @@ export function formatNumber(n: number, fractionalDigits: number = 2, format: "u
     const parts = str.split('.');
 
     const thousands = [];
-    let i = parts[0].length - 3;
+    let i = parts[0]!.length - 3;
     let l = 3;
     while (i >= 0 || (l + i) > 0) {
         if (i < 0) {
             l += i;
             i = 0;
         }
-        thousands.unshift(parts[0].substr(i, l));
+        thousands.unshift(parts[0]!.substr(i, l));
         i -= 3;
     }
 
